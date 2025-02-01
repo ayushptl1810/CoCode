@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Quiz</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/subject.css') }}"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <img
+        src="{{ url_for('static', filename='images/Logo.jpg') }}"
+        alt="Logo"
+      />
+      <nav>
+        <ul role="list">
+          <li>HOME</li>
+          <li>FEATURES</li>
+          <li>FIND US</li>
+          <li>PROFILE</li>
+        </ul>
+      </nav>
+      <button class="btn btn-nav">LOGIN</button>
+    </header>
+
+    <section class="section-subject">
+      <h2>Choose a subject to give quiz on!</h2>
+      <div class="subject-flex">
+        <div class="card" id="maths">
+          <div class="card-content">
+            <h3>Math Quiz</h3>
+            <p class="description">
+              Take this adaptive quiz to improve your math skills. Your
+              difficulty level will change based on your performance.
+            </p>
+            <div class="progress">
+              <span class="progress-text">Your Progress:</span>
+              <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+              </div>
+              <a href="{{ url_for('quiz', subject='Maths') }}" class="start-btn"
+                >Start Quiz</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="physics">
+          <div class="card-content">
+            <h3>Physics Quiz</h3>
+            <p class="description">
+              Test your physics knowledge with this adaptive quiz. Difficulty
+              levels will adjust based on your progress.
+            </p>
+            <div class="progress">
+              <span class="progress-text">Your Progress:</span>
+              <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+              </div>
+              <a
+                href="{{ url_for('quiz', subject='Physics') }}"
+                class="start-btn"
+                >Start Quiz</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="chemistry">
+          <div class="card-content">
+            <h3>Chemistry Quiz</h3>
+            <p class="description">
+              Improve your chemistry knowledge with this adaptive quiz. The
+              difficulty will be based on your previous performance.
+            </p>
+            <div class="progress">
+              <span class="progress-text">Your Progress:</span>
+              <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+              </div>
+              <a
+                href="{{ url_for('quiz', subject='Chemistry') }}"
+                class="start-btn"
+                >Start Quiz</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-progress">
+      <div class="progress-card">
+        <div class="progress-flex">
+          <div class="val">
+            <h2>Actual<br />Progress</h2>
+            <p>56%</p>
+          </div>
+          <div class="val">
+            <h2>Predicted Future<br />Progress</h2>
+            <p>56%</p>
+          </div>
+        </div>
+        <div class="progress-graph"></div>
+      </div>
+    </section>
+  </body>
+</html>

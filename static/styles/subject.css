@@ -1,0 +1,193 @@
+@import "./base.css";
+
+.btn-nav {
+  background-color: var(--clr-black);
+  color: var(--clr-text-white);
+  padding: 5px 3rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-nav:hover {
+  background-color: var(--clr-accent-1);
+  color: var(--clr-text-white);
+}
+
+.section-subject {
+  background-color: var(--clr-accent-1);
+  padding: 10rem 10rem 5rem 10rem;
+
+  h2 {
+    font-weight: bolder;
+    font-size: var(--font-size-heading-xl);
+    margin-bottom: 2rem;
+    color: var(--clr-text-white);
+    text-align: center;
+  }
+}
+
+.subject-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--clr-primary);
+  border-radius: var(--border-radius-3);
+  width: 30vw;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+}
+
+.card h3 {
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card .description {
+  font-size: var(--font-size-regular);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.progress {
+  margin-top: 2rem;
+}
+
+.progress-text {
+  font-size: var(--font-size-regular);
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--clr-accent-1);
+  border-radius: var(--border-radius-1);
+  margin-bottom: 2.5rem;
+}
+
+.progress-bar-fill {
+  width: 20%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  border-radius: var(--border-radius-1);
+}
+
+.start-btn {
+  background-color: #ffffff;
+  color: var(--clr-black);
+  padding: 5px 3rem;
+  border-radius: var(--border-radius-2);
+  font-size: var(--font-size-regular);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: var(--clr-accent-1);
+}
+
+.card#maths {
+  background-image: url("../images/Maths.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card#physics {
+  background-image: url("../images/Physics.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.card#chemistry {
+  background-image: url("../images/Chemistry.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card#maths::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.card#physics::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.card#chemistry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.section-progress {
+  background-color: var(--clr-primary);
+  padding: 10rem 10rem 5rem 10rem;
+}
+
+.progress-card {
+  background-color: var(--clr-black);
+  border-radius: var(--border-radius-2);
+  padding: 3rem;
+}
+
+.progress-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.val {
+  background-color: var(--clr-accent-1);
+  color: var(--clr-text-white);
+  border-radius: var(--border-radius-2);
+  text-align: center;
+  width: 20vw;
+  padding-top: 1rem;
+
+  h2 {
+    font-size: var(--font-size-md);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: var(--font-size-regular);
+    margin-bottom: 1rem;
+  }
+}
