@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Quiz</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/quiz.css') }}"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <img
+        src="{{ url_for('static', filename='images/Logo.jpg') }}"
+        alt="Logo"
+      />
+      <nav class="timer">
+        <div id="timer">Time: 00:00</div>
+      </nav>
+    </header>
+    <div class="quiz-container">
+      <div class="progress">
+        <div class="progress-text">STEP 1 OUT OF 5</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+      <div class="quiz-content">
+        <div class="quiz-main">
+          <h1 id="question-text">Loading question...</h1>
+          <div class="quiz-options"></div>
+        </div>
+
+        <div class="quiz-sidebar">
+          <div class="questions-list">
+            <h3>Quiz Questions List</h3>
+            <div class="questions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let questions = [];
+  let currentIndex = 0;
+  let startTime;
+  let timeSpent = [];
+  let timerInterval;
+  let mainTimer = 0;
+  let questionStartTime = 0;
+  let selectedOptions = {};
+
+  function updateProgress() {
+    const answeredCount = Object.keys(selectedOptions).length;
+    const totalQuestions = questions.length;
+    const progressPercent = (answeredCount / totalQuestions) * 100;
+
+    const progressBarFill = document.querySelector(".progress-bar-fill");
+    progressBarFill.style.width = `${progressPercent}%`;
+
+    const progressText = document.querySelector(".progress-text");
+    progressText.textContent = `STEP ${answeredCount} OUT OF ${totalQuestions}`;
+  }
+
+  async function fetchQuestions() {
+    const response = await fetch("/get_questions");
+    questions = await response.json();
+    timeSpent = new Array(questions.length).fill(0);
+    loadQuestion();
+    createQuestionList();
+    updateProgress();
+  }
+
+  function createQuestionList() {
+    const questionList = document.querySelector(".questions");
+    questionList.innerHTML = "";
+
+    questions.forEach((q, index) => {
+      const questionItem = document.createElement("a");
+      questionItem.href = "#";
+      questionItem.classList.add("question-item");
+      questionItem.textContent = `Quiz Question ${index + 1}`;
+      questionItem.dataset.index = index;
+
+      if (selectedOptions[index]?.answer) {
+        questionItem.classList.add("completed");
+      }
+
+      questionItem.addEventListener("click", () => {
+        saveTimeSpent();
+        selectQuestion(index);
+      });
+
+      questionList.appendChild(questionItem);
+    });
+  }
+
+  function loadQuestion() {
+    if (questions.length === 0) return;
+
+    if (currentIndex === 0 && !timerInterval) {
+      startMainTimer();
+    }
+
+    const questionData = questions[currentIndex];
+    document.querySelector(".quiz-main h1").textContent = questionData.question;
+
+    const optionsContainer = document.querySelector(".quiz-options");
+    optionsContainer.innerHTML = "";
+
+    questionData.options.forEach((optionText, i) => {
+      const option = document.createElement("label");
+      option.classList.add("option");
+      option.innerHTML = `<span class="letter">${String.fromCharCode(
+        65 + i
+      )}</span>
+                         <span class="text">${optionText}</span>`;
+
+      if (selectedOptions[currentIndex]?.answer === optionText) {
+        option.classList.add("correct");
+        const tickMark = document.createElement("span");
+        tickMark.classList.add("check");
+        tickMark.textContent = "✔";
+        option.appendChild(tickMark);
+      }
+
+      option.addEventListener("click", () => selectOption(option, optionText));
+      optionsContainer.appendChild(option);
+    });
+
+    const navButtons = document.createElement("div");
+    navButtons.classList.add("btn-container");
+    navButtons.innerHTML = `
+      <button class="quiz-btn prev-btn" ${
+        currentIndex === 0 ? "disabled" : ""
+      }>Previous</button>
+      <button class="quiz-btn next-btn">${
+        currentIndex === questions.length - 1 ? "Submit" : "Save"
+      }</button>
+    `;
+    optionsContainer.appendChild(navButtons);
+
+    document.querySelector(".prev-btn").addEventListener("click", prevQuestion);
+    document.querySelector(".next-btn").addEventListener("click", nextOrSubmit);
+
+    questionStartTime = mainTimer;
+  }
+
+  function selectOption(option, optionText) {
+    const prevSelected = selectedOptions[currentIndex]?.element;
+    if (prevSelected) {
+      prevSelected.classList.remove("correct");
+      const existingTickMark = prevSelected.querySelector(".check");
+      if (existingTickMark) existingTickMark.remove();
+    }
+
+    option.classList.add("correct");
+    const tickMark = document.createElement("span");
+    tickMark.classList.add("check");
+    tickMark.textContent = "✔";
+    option.appendChild(tickMark);
+
+    selectedOptions[currentIndex] = {
+      element: option,
+      answer: optionText,
+    };
+
+    const questionItems = document.querySelectorAll(".question-item");
+    questionItems[currentIndex].classList.add("completed");
+  }
+
+  function prevQuestion() {
+    saveTimeSpent();
+    if (currentIndex > 0) {
+      currentIndex--;
+      loadQuestion();
+    }
+  }
+
+  function nextOrSubmit() {
+    saveTimeSpent();
+    updateProgress();
+    if (currentIndex < questions.length - 1) {
+      currentIndex++;
+      loadQuestion();
+    } else {
+      submitAnswers();
+    }
+  }
+
+  function selectQuestion(index) {
+    saveTimeSpent();
+    currentIndex = index;
+    loadQuestion();
+  }
+
+  function saveTimeSpent() {
+    const timeOnQuestion = mainTimer - questionStartTime;
+    timeSpent[currentIndex] += timeOnQuestion;
+  }
+
+  async function submitAnswers() {
+    saveTimeSpent();
+    clearInterval(timerInterval);
+
+    const answers = Object.entries(selectedOptions).reduce(
+      (acc, [index, data]) => {
+        acc[index] = data.answer;
+        return acc;
+      },
+      {}
+    );
+
+    const response = await fetch("/submit-answers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ answers, times: timeSpent }),
+    });
+
+    const result = await response.json();
+    alert(result.message);
+  }
+
+  function startMainTimer() {
+    startTime = Date.now();
+    timerInterval = setInterval(updateMainTimer, 1000);
+  }
+
+  function updateMainTimer() {
+    const currentTime = Date.now();
+    mainTimer = Math.floor((currentTime - startTime) / 1000);
+    updateTimerDisplay();
+  }
+
+  function updateTimerDisplay() {
+    const minutes = Math.floor(mainTimer / 60);
+    const seconds = mainTimer % 60;
+    document.querySelector("#timer").textContent = `Time: ${formatTime(
+      minutes
+    )}:${formatTime(seconds)}`;
+  }
+
+  function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+  }
+
+  document.addEventListener("DOMContentLoaded", fetchQuestions);
+</script>

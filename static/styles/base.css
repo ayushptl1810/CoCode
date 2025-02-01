@@ -1,0 +1,193 @@
+@layer reset {
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent font size inflation */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Remove default margin in favour of better control in authored CSS */
+  * {
+    margin: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* Set shorter line heights on headings and interactive elements */
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Balance text wrapping on headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-primary: #fdfffc;
+    --clr-black: black;
+
+    --clr-accent-1: #0e79b2;
+    --clr-accent-2: #fbfef9;
+    --clr-text-white: #ffffff;
+    --clr-text-black: #000000;
+
+    --ff-heading: "Outfit", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --fs-300: 1rem;
+    --fs-400: 1.5rem;
+    --fs-500: 2rem;
+    --fs-600: 2.5rem;
+    --fs-700: 3rem;
+    --fs-800: 3.5rem;
+    --fs-900: 4rem;
+    --fs-1000: 5rem;
+
+    --border-radius-1: 0.25rem;
+    --border-radius-2: 0.5rem;
+    --border-radius-3: 1rem;
+
+    --font-size-heading-sm: var(--fs-700);
+    --font-size-heading-regular: var(--fs-800);
+    --font-size-heading-lg: var(--fs-900);
+    --font-size-heading-xl: var(--fs-1000);
+
+    --font-size-sm: var(--fs-300);
+    --font-size-regular: var(--fs-400);
+    --font-size-md: var(--fs-500);
+    --font-size-lg: var(--fs-600);
+
+    --clr-other-1: #d62828;
+    --clr-other-2: $6C757D;
+  }
+
+  html {
+    font-family: var(--ff-body);
+    line-height: 1.6rem;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--ff-body);
+    color: var(--text-main-light);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--ff-heading);
+  }
+
+  img {
+    border-radius: var(--border-radius-3);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.25rem 4.25rem;
+    font-size: var(--font-size-regular);
+    font-weight: bold;
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin-inline: 1.5rem;
+        cursor: pointer;
+        align-items: center;
+      }
+    }
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+
+  .btn {
+    border-radius: var(--border-radius-2);
+    font-family: var(--ff-body);
+    cursor: pointer;
+    border: none;
+  }
+
+  .footer {
+    background-color: var(--clr-black);
+    padding: 4rem 6rem;
+    color: var(--clr-primary);
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 10rem;
+
+    .footer-content {
+      width: 20vw;
+
+      h2 {
+        font-size: var(--font-size-regular);
+      }
+    }
+
+    .footer-list h3 {
+      margin-bottom: 1rem;
+    }
+  }
+}
