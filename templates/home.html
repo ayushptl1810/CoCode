@@ -23,10 +23,9 @@
       />
       <nav>
         <ul role="list">
-          <li>FEATURES</li>
-          <li>FIND US</li>
-          <li>QUIZ</li>
-          <li>PROFILE</li>
+          <li><a href="#features">FEATURES</a></li>
+          <li><a href="#find-us">FIND US</a></li>
+          <li><a href="{{ url_for('subject')}}">QUIZ</a></li>
         </ul>
       </nav>
       <button class="btn btn-nav">LOGIN</button>
@@ -42,7 +41,7 @@
       </div>
     </section>
 
-    <section id="feature" class="section-feature">
+    <section id="features" class="section-feature">
       <div class="section-content">
         <h2>Smart Learning, Simplified!</h2>
         <p>
@@ -89,7 +88,7 @@
       </div>
     </section>
 
-    <section class="section-map" id="contact">
+    <section class="section-map" id="find-us">
       <h2>Find Us</h2>
       <div class="map-grid">
         <div id="map"></div>

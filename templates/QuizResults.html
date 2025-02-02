@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/quizresults.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <img
+        src="{{ url_for('static', filename='images/Logo.jpg') }}"
+        alt="Logo"
+      />
+      <nav>
+        <ul role="list">
+          <li>
+            <a href="{{ url_for('home') }}">HOME</a>
+          </li>
+          <li>
+            <a href="{{ url_for('home') }}#features">FEATURES</a>
+          </li>
+          <li><a href="{{ url_for('home') }}#find-us">FIND US</a></li>
+          <li><a href="{{ url_for('subject')}}">QUIZ</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-nav">LOGIN</button>
+    </div>
+    <div class="result">
+      <div class="content">
+        <h1>Quiz Results</h1>
+        <h2>Your Score: {{ score }}/{{ total_questions }}</h2>
+        {% if score >= 80 %}
+        <p>🎉 Congratulations! You passed the quiz.</p>
+        {% else %}
+        <p>😞 Sorry, you didn't pass the quiz. Try again!</p>
+        {% endif %}
+
+        <h3>Performance Over Time</h3>
+        <img
+          src="data:image/png;base64,{{ img_url }}"
+          alt="Performance Graph"
+          style="
+            margin-left: 29%;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          "
+        />
+
+        <a href="{{ url_for('home') }}" class="btn-nav">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

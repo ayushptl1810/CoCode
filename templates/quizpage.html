@@ -119,7 +119,7 @@
       )}</span>
                          <span class="text">${optionText}</span>`;
 
-      if (selectedOptions[currentIndex]?.answer === optionText) {
+      if (selectedOptions[questionData.question_id]?.answer === optionText) {
         option.classList.add("correct");
         const tickMark = document.createElement("span");
         tickMark.classList.add("check");
@@ -127,7 +127,9 @@
         option.appendChild(tickMark);
       }
 
-      option.addEventListener("click", () => selectOption(option, optionText));
+      option.addEventListener("click", () =>
+        selectOption(option, optionText, questionData.question_id)
+      );
       optionsContainer.appendChild(option);
     });
 
@@ -149,8 +151,8 @@
     questionStartTime = mainTimer;
   }
 
-  function selectOption(option, optionText) {
-    const prevSelected = selectedOptions[currentIndex]?.element;
+  function selectOption(option, optionText, question_id) {
+    const prevSelected = selectedOptions[question_id]?.element;
     if (prevSelected) {
       prevSelected.classList.remove("correct");
       const existingTickMark = prevSelected.querySelector(".check");
@@ -163,7 +165,7 @@
     tickMark.textContent = "✔";
     option.appendChild(tickMark);
 
-    selectedOptions[currentIndex] = {
+    selectedOptions[question_id] = {
       element: option,
       answer: optionText,
     };
@@ -207,8 +209,8 @@
     clearInterval(timerInterval);
 
     const answers = Object.entries(selectedOptions).reduce(
-      (acc, [index, data]) => {
-        acc[index] = data.answer;
+      (acc, [question_id, data]) => {
+        acc[question_id] = data.answer;
         return acc;
       },
       {}
@@ -220,8 +222,11 @@
       body: JSON.stringify({ answers, times: timeSpent }),
     });
 
-    const result = await response.json();
-    alert(result.message);
+    if (response.redirected) {
+      window.location.href = response.url;
+    } else {
+      console.error("Failed to redirect");
+    }
   }
 
   function startMainTimer() {

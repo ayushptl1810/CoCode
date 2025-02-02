@@ -1,0 +1,173 @@
+Subject,Chapter,Question,Difficulty Level,Option 1,Option 2,Option 3,Option 4,Correct Answer
+Maths,Probability,"What is the probability of rolling an even number on a fair six-sided die?",Very Easy, 1/2, 1/3, 1/4, 1/6, 1/2
+Maths,Probability,"If a coin is flipped twice,  what is the probability of getting two heads?",Easy, 1/4, 1/3, 1/2, 1/8, 1/4
+Maths,Probability,"A bag contains 3 red and 5 blue balls. What is the probability of drawing a red ball?",Moderate, 3/8, 5/8, 1/2, 1/3, 3/8
+Maths,Probability,"What is the probability of drawing a king from a standard deck of 52 cards?",Tricky,0    , 1/4,46023    ,18994    ,41275    
+Maths,Probability,"A dice is rolled twice. What is the probability of getting a sum of 7?",Tough,45809    ,45992    ,13150    ,43101    ,45809    
+Maths,Statistics,"What is the median of the numbers 1,3,5,79?",Very Easy,5,3,7,9,5
+Maths,Statistics,"What is the mode of the numbers 2,2,3,4,4,4,5?",Easy,2,3,4,5,4
+Maths,Statistics,"What is the range of the numbers 10,20,30,40,50?",Moderate,40,30,20,10,40
+Maths,Statistics,"What is the standard deviation of the numbers 2,4,6,8,10?",Tricky,2.83,3.16,2.45,3,2.83
+Maths,Statistics,"What is the variance of the numbers 1,2,3,4,5?",Tough,2,2.5,3,1.5,2
+Maths,Trigonometry,"What is the value of sin(0°)?",Very Easy,0,1,0.5,-1,0
+Maths,Trigonometry,"What is the value of cos(90°)?",Easy,0,1,0.5,-1,0
+Maths,Trigonometry,"What is the value of tan(45°)?",Moderate,1,0,0.5,-1,1
+Maths,Trigonometry,"What is the value of cosec(30°)?",Tricky,2,1,0.5,-1,2
+Maths,Trigonometry,"What is the value of sec(60°)?",Tough,2,1,0.5,-1,2
+Maths,Calculus,"What is the derivative of x^3 with respect to x?",Very Easy,3x^2,x^2,2x,3x,3x^2
+Maths,Calculus,"What is the integral of 2x with respect to x?",Easy,x^2,2x^2,x,2x,x^2
+Maths,Calculus,"What is the derivative of sin(x)?",Moderate,cos(x),-cos(x),sin(x),-sin(x),cos(x)
+Maths,Calculus,"What is the integral of cos(x)?",Tricky,sin(x),-sin(x),cos(x),-cos(x),sin(x)
+Maths,Calculus,"What is the limit of (x^2 - 1)/(x - 1) as x approaches 1?",Tough,2,1,0,Undefined,2
+Maths,Algebra,"Solve for x: 3x + 2 = 11",Very Easy,3,2,4,5,3
+Maths,Algebra,"Solve for x: x^2 - 4 = 0",Easy,2,-2,4,-4,2
+Maths,Algebra,"Solve for x: 2x^2 + 3x - 2 = 0",Moderate,-2,2, -1/2,1,-2
+Maths,Algebra,"Solve for x: log(x) = 2",Tricky,100,10,20,50,100
+Maths,Algebra,"Solve for x: e^x = 1",Tough,0,1,-1,2,0
+Maths,Geometry,"What is the area of a square with side length 5?",Very Easy,25,20,15,10,25
+Maths,Geometry,"What is the circumference of a circle with radius 7?",Easy,44,22,14,7,44
+Maths,Geometry,"What is the volume of a cube with side length 3?",Moderate,27,9,18,36,27
+Maths,Geometry,"What is the area of a triangle with base 6 and height 4?",Tricky,12,24,6,18,12
+Maths,Geometry,"What is the surface area of a sphere with radius 5?",Tough,314,628,157,471,314
+Maths,Calculus,"What is the derivative of e^x?",Very Easy,e^x,xe^x,x,1,e^x
+Maths,Calculus,"What is the derivative of ln(x)?",Easy,1/x,x,1,ln(x),1/x
+Maths,Calculus,"Find the integral of x^2 dx",Moderate,x^3/3,x^3/2,x^2,x^3,x^3/3
+Maths,Calculus,"What is the derivative of tan(x)?",Tricky,sec^2(x),cos^2(x),sin^2(x),csc^2(x),sec^2(x)
+Maths,Calculus,"Evaluate the limit: lim(x→0) sin(x)/x",Tough,1,0,∞,-1,1
+Maths,Calculus,"What is the derivative of x^5?",Very Easy,5x^4,4x^3,5x^3,x^4,5x^4
+Maths,Calculus,"Find the integral of 2x dx",Easy,x^2,2x^2,x^2+C,2x,x^2+C
+Maths,Calculus,"What is the derivative of sin^2(x)?",Moderate,2sin(x)cos(x),2sin(x),cos(2x),sin(2x),2sin(x)cos(x)
+Maths,Calculus,"Evaluate limit: lim(x→∞) (1+1/x)^x",Tricky,e,1,∞,0,e
+Maths,Calculus,"Find d/dx(arcsin(x))",Tough,1/√(1-x^2),1/√(1+x^2),-1/√(1-x^2),1/(1-x^2),1/√(1-x^2)
+Maths,Statistics,"Calculate the probability of getting heads OR tails",Easy,1,0,0.5,2,1
+Maths,Statistics,"What is the correlation coefficient range?",Moderate,-1 to 1,0 to 1,-∞ to ∞,0 to ∞,-1 to 1
+Maths,Statistics,"For normal distribution what is z-score for 95% confidence?",Tricky,1.96,2.58,1.64,2.33,1.96
+Maths,Statistics,"What is the standard error formula?",Moderate,s/√n,s/n,√s/n,s^2/n,s/√n
+Maths,Statistics,"Calculate Spearman's rank for perfect correlation",Tricky,1,-1,0,0.5,1
+Maths,Statistics,"What is Chebyshev's inequality k=2?",Tough,75%,50%,90%,95%,75%
+Maths,Probability,"What is the probability of rolling a sum of 8 with two dice?",Tough,5/36,1/6,1/4,1/8,5/36
+Maths,Probability,"What's probability of drawing an ace from a deck?",Very Easy,4/52,1/13,1/4,1/52,4/52
+Maths,Probability,"Probability of getting at least one 6 in two dice rolls?",Easy,11/36,1/6,1/3,25/36,11/36
+Maths,Probability,"What's the probability of 3 heads in 3 coin flips?",Moderate,1/8,1/6,1/4,1/2,1/8
+Maths,Probability,"Probability of selecting 2 aces from a deck without replacement?",Tricky,6/1326,1/221,1/156,1/104,6/1326
+Maths,Probability,"Probability of birthday paradox in room of 23 people?",Easy,0.5,0.4,0.6,0.3,0.5
+Physics,Mechanics,"What is acceleration due to gravity on Earth?",Very Easy,9.8 m/s²,8.9 m/s²,10.8 m/s²,7.8 m/s²,9.8 m/s²
+Physics,Mechanics,"State Newton's First Law",Easy,Law of Inertia,Law of Force,Law of Action,Law of Motion,Law of Inertia
+Physics,Mechanics,"Calculate momentum: mass=2kg velocity=3m/s",Moderate,6 kg⋅m/s,5 kg⋅m/s,4 kg⋅m/s,3 kg⋅m/s,6 kg⋅m/s
+Physics,Mechanics,"What is period of simple pendulum length 1m?",Tricky,2π seconds,π seconds,4π seconds,π/2 seconds,2π seconds
+Physics,Mechanics,"Find angular momentum: I=2 ω=3",Tough,6 kg⋅m²/s,4 kg⋅m²/s,8 kg⋅m²/s,5 kg⋅m²/s,6 kg⋅m²/s
+Physics,Mechanics,"What is the SI unit of force?",Very Easy,Newton,Joule,Watt,Pascal,Newton
+Physics,Mechanics,"Calculate work: F=10N d=5m θ=60°",Easy,25J,50J,75J,100J,25J
+Physics,Mechanics,"Find kinetic energy: m=4kg v=2m/s",Moderate,8J,16J,4J,12J,8J
+Physics,Mechanics,"Calculate centripetal acceleration: v=5m/s r=2m",Tricky,12.5 m/s²,10 m/s²,15 m/s²,20 m/s²,12.5 m/s²
+Physics,Mechanics,"Find moment of inertia of solid sphere",Tough,2MR²/5,MR²/2,3MR²/5,MR²,2MR²/5
+Physics,Waves,"What is the unit of frequency?",Very Easy,Hertz,Meter,Second,Joule,Hertz
+Physics,Waves,"What is speed of sound in air?",Easy,343 m/s,300 m/s,400 m/s,500 m/s,343 m/s
+Physics,Waves,"Calculate wavelength: v=340m/s f=170Hz",Moderate,2m,1m,3m,4m,2m
+Physics,Waves,"What is phase difference between sin(x) and cos(x)?",Tricky,π/2,π,2π,π/4,π/2
+Physics,Waves,"Find resonant frequency: m=1kg k=100N/m",Tough,1.59 Hz,2.59 Hz,3.59 Hz,4.59 Hz,1.59 Hz
+Physics,Waves,"What is the unit of wavelength?",Very Easy,Meter,Second,Hertz,Newton,Meter
+Physics,Waves,"Calculate frequency: T=0.2s",Easy,5 Hz,4 Hz,3 Hz,2 Hz,5 Hz
+Physics,Waves,"Find wave speed: λ=2m f=500Hz",Moderate,1000 m/s,750 m/s,500 m/s,250 m/s,1000 m/s
+Physics,Waves,"Calculate doppler shift: v=34m/s f=1000Hz",Tricky,100 Hz,200 Hz,300 Hz,400 Hz,100 Hz
+Physics,Waves,"Find wave intensity at 2m if P=100W",Tough,1.99 W/m²,2.99 W/m²,3.99 W/m²,4.99 W/m²,1.99 W/m²
+Physics,Thermodynamics,"What is the SI unit of temperature?",Very Easy,Kelvin,Celsius,Fahrenheit,Joule,Kelvin
+Physics,Thermodynamics,"What is the first law of thermodynamics?",Easy,Energy is conserved,Entropy increases,Heat flows from hot to cold,Work is done by the system,Energy is conserved
+Physics,Thermodynamics,"What is the specific heat capacity of water?",Moderate,4.18 J/g°C,2.18 J/g°C,1.00 J/g°C,3.00 J/g°C,4.18 J/g°C
+Physics,Thermodynamics,"What is the ideal gas law?",Tricky,PV = nRT,F = ma,E = mc^2,V = IR,PV = nRT
+Physics,Thermodynamics,"What is the efficiency of a Carnot engine?",Tough,1 - (Tc/Th),Tc/Th,Th/Tc,1 - (Th/Tc),1 - (Tc/Th)
+Physics,Current Electricity,"What is the unit of electric current?",Very Easy,Ampere,Volt,Ohm,Watt,Ampere
+Physics,Current Electricity,"What is Ohm's Law?",Easy,V = IR,I = V/R,P = IV,R = V/I,V = IR
+Physics,Current Electricity,"What is the resistance of a wire with V = 10V and I = 2A?",Moderate,5 Ω,10 Ω,20 Ω,2 Ω,5 Ω
+Physics,Current Electricity,"What is the power dissipated in a resistor with V = 12V and I = 3A?",Tricky,36 W,24 W,12 W,48 W,36 W
+Physics,Current Electricity,"What is the equivalent resistance of two 10 Ω resistors in parallel?",Tough,5 Ω,10 Ω,20 Ω,2 Ω,5 Ω
+Physics,Nuclear Physics,"What is the atomic number of Hydrogen?",Very Easy,1,2,3,4,1
+Physics,Nuclear Physics,"What is the mass number of Carbon-12?",Easy,12,6,14,16,12
+Physics,Nuclear Physics,"What is the charge of a proton?",Moderate,1,-1,0,2,1
+Physics,Nuclear Physics,"What is the half-life of Carbon-14?",Tricky,5730 years,5000 years,10000 years,2000 years,5730 years
+Physics,Nuclear Physics,"What is the binding energy of a nucleus?",Tough,Energy required to split the nucleus,Energy released during fusion,Energy of the nucleus,Energy of the electrons,Energy required to split the nucleus
+Physics,Magnetism,"What is the SI unit of magnetic field strength?",Very Easy,Tesla,Gauss,Weber,Ampere,Tesla
+Physics,Magnetism,"What is the direction of the magnetic field inside a solenoid?",Easy,Along the axis,Perpendicular to the axis,Random direction,No direction,Along the axis
+Physics,Magnetism,"What is the force on a current-carrying wire in a magnetic field?",Moderate,F = BIL sinθ,F = BIL cosθ,F = BIL tanθ,F = BIL,F = BIL sinθ
+Physics,Magnetism,"What is the magnetic flux through a loop of area A in a magnetic field B?",Tricky,BA,B/A,A/B,B^2 A,BA
+Physics,Magnetism,"What is the magnetic moment of a current loop?",Tough,IA,I/A,A/I,I^2 A,IA
+Physics,Optics,"What is the speed of light in a vacuum?",Very Easy,3 x 10^8 m/s,2 x 10^8 m/s,1 x 10^8 m/s,4 x 10^8 m/s,3 x 10^8 m/s
+Physics,Optics,"What is the law of reflection?",Easy,Angle of incidence = Angle of reflection,Angle of incidence > Angle of reflection,Angle of incidence < Angle of reflection,No law,Angle of incidence = Angle of reflection
+Physics,Optics,"What is the refractive index of water?",Moderate,1.33,1,1.5,2,1.33
+Physics,Optics,"What is the focal length of a convex lens with radius of curvature 20 cm?",Tricky,10 cm,20 cm,30 cm,40 cm,10 cm
+Physics,Optics,"What is the magnification of a convex lens?",Tough,Positive,Negative,Zero,Infinite,Positive
+Physics,"Work, Power and Energy","What is the formula for kinetic energy?",Very Easy,1/2 mv^2,mgh,Fd,Pt,1/2 mv^2
+Physics,"Work, Power and Energy","What is the formula for potential energy?",Easy,mgh,1/2 mv^2,Fd,Pt,mgh
+Physics,"Work, Power and Energy","What is the unit of power?",Moderate,Watt,Joule,Newton,Pascal,Watt
+Physics,"Work, Power and Energy","What is the work done by a force of 10 N over a distance of 5 m?",Tricky,50 J,25 J,10 J,5 J,50 J
+Physics,"Work, Power and Energy","What is the power output of a machine that does 100 J of work in 10 s?",Tough,10 W,100 W,1 W,1000 W,10 W
+Physics,Machines,"What is the mechanical advantage of a lever?",Very Easy,Input force / Output force,Output force / Input force,Length of effort arm / Length of load arm,Load / Effort,Length of effort arm / Length of load arm
+Physics,Machines,"What is the efficiency of a machine?",Easy,(Output work / Input work) x 100%,(Input work / Output work) x 100%,(Output force / Input force) x 100%,(Input force / Output force) x 100%,(Output work / Input work) x 100%
+Physics,Machines,"What is the ideal mechanical advantage of a pulley system?",Moderate,Number of ropes supporting the load,Number of pulleys,Length of rope,Weight of load,Number of ropes supporting the load
+Physics,Machines,"What is the work done by a machine with input work 100 J and efficiency 80%?",Tricky,80 J,100 J,120 J,20 J,80 J
+Physics,Machines,"What is the output force of a machine with input force 10 N and mechanical advantage 5?",Tough,50 N,10 N,5 N,2 N,50 N
+Chemistry,Chemical Reactions and Equations,"What is the product of the reaction between HCl and NaOH?",Very Easy,NaCl + H2O,H2 + Cl2,Na + Cl,NaOH + HCl,NaCl + H2O
+Chemistry,Chemical Reactions and Equations,"What is the balanced equation for the combustion of methane?",Easy,CH4 + 2O2 → CO2 + 2H2O,CH4 + O2 → CO2 + H2O,CH4 + 3O2 → CO2 + 2H2O,CH4 + 4O2 → CO2 + 2H2O,CH4 + 2O2 → CO2 + 2H2O
+Chemistry,Chemical Reactions and Equations,"What is the type of reaction: 2H2 + O2 → 2H2O?",Moderate,Combination,Decomposition,Single displacement,Double displacement,Combination
+Chemistry,Chemical Reactions and Equations,"What is the product of the reaction between CaCO3 and HCl?",Tricky,CaCl2 + CO2 + H2O,CaCl2 + H2O,CaO + CO2,Ca + Cl2 + H2O,CaCl2 + CO2 + H2O
+Chemistry,Chemical Reactions and Equations,"What is the balanced equation for the reaction between Fe and O2?",Tough,4Fe + 3O2 → 2Fe2O3,2Fe + 3O2 → 2Fe2O3,4Fe + O2 → 2Fe2O3,Fe + O2 → Fe2O3,4Fe + 3O2 → 2Fe2O3
+Chemistry,"Acids, Bases and Salts","What is the pH of a neutral solution?",Very Easy,7,1,14,0,7
+Chemistry,"Acids, Bases and Salts","What is the pH of a solution with [H+] = 10^-3 M?",Easy,3,7,10,14,3
+Chemistry,"Acids, Bases and Salts","What is the pH of a solution with [OH-] = 10^-5 M?",Moderate,9,7,5,14,9
+Chemistry,"Acids, Bases and Salts","What is the pH of a 0.1 M HCl solution?",Tricky,1,7,10,14,1
+Chemistry,"Acids, Bases and Salts","What is the pH of a 0.01 M NaOH solution?",Tough,12,7,2,14,12
+Chemistry,Metals and Non-metals,"Which of the following is a non-metal?",Very Easy,Iron,Copper,Sulfur,Aluminum,Sulfur
+Chemistry,Metals and Non-metals,"Which metal is liquid at room temperature?",Easy,Mercury,Iron,Copper,Aluminum,Mercury
+Chemistry,Metals and Non-metals,"Which metal is the best conductor of electricity?",Moderate,Silver,Copper,Gold,Aluminum,Silver
+Chemistry,Metals and Non-metals,"Which metal reacts vigorously with water?",Tricky,Sodium,Iron,Copper,Aluminum,Sodium
+Chemistry,Metals and Non-metals,"Which metal is used in thermometers?",Tough,Mercury,Iron,Copper,Aluminum,Mercury
+Chemistry,Carbon and its Compounds,"What is the simplest hydrocarbon?",Very Easy,Methane,Ethane,Propane,Butane,Methane
+Chemistry,Carbon and its Compounds,"What is the formula of benzene?",Easy,C6H6,C6H12,C6H10,C6H8,C6H6
+Chemistry,Carbon and its Compounds,"What is the functional group of alcohols?",Moderate,-OH,-COOH,-CHO,-NH2,-OH
+Chemistry,Carbon and its Compounds,"What is the IUPAC name of CH3COOH?",Tricky,Ethanoic acid,Methanoic acid,Propanoic acid,Butanoic acid,Ethanoic acid
+Chemistry,Carbon and its Compounds,"What is the structure of ethene?",Tough,C2H4,C2H6,C2H2,C2H8,C2H4
+Chemistry,Periodic Classification of Elements,"Which element has the atomic number 6?",Very Easy,Carbon,Nitrogen,Oxygen,Hydrogen,Carbon
+Chemistry,Periodic Classification of Elements,"Which group does Sodium belong to?",Easy,Alkali metals,Alkaline earth metals,Halogens,Noble gases,Alkali metals
+Chemistry,Periodic Classification of Elements,"Which period does Chlorine belong to?",Moderate,3,4,5,6,3
+Chemistry,Periodic Classification of Elements,"Which element is a halogen?",Tricky,Fluorine,Sodium,Magnesium,Aluminum,Fluorine
+Chemistry,Periodic Classification of Elements,"Which element is a noble gas?",Tough,Helium,Hydrogen,Oxygen,Nitrogen,Helium
+Chemistry,Organic Chemistry,"What is molecular formula of methane?",Very Easy,CH₄,C₂H₆,C₃H₈,CH₃,CH₄
+Chemistry,Organic Chemistry,"What is functional group of ketones?",Easy,C=O,OH,COOH,COO,C=O
+Chemistry,Organic Chemistry,"Name CH₃-CH₂-CH₃",Moderate,Propane,Ethane,Butane,Methane,Propane
+Chemistry,Organic Chemistry,"What is hybridization in ethene?",Tricky,sp²,sp³,sp,sp³d,sp²
+Chemistry,Organic Chemistry,"Predict product: CH₄ + Cl₂ →?",Tough,CH₃Cl,CH₂Cl₂,CHCl₃,CCl₄,CH₃Cl
+Chemistry,Organic Chemistry,"What is IUPAC name of CH₃OH?",Very Easy,Methanol,Ethanol,Propanol,Butanol,Methanol
+Chemistry,Organic Chemistry,"Number of σ bonds in ethane?",Easy,7,6,8,5,7
+Chemistry,Organic Chemistry,"Major product of addition HBr to propene?",Moderate,1-bromopropane,2-bromopropane,3-bromopropane,propane,2-bromopropane
+Chemistry,Organic Chemistry,"Stability order of carbocations?",Tricky,3°>2°>1°>CH₃,1°>2°>3°>CH₃,2°>1°>3°>CH₃,CH₃>1°>2°>3°,3°>2°>1°>CH₃
+Chemistry,Organic Chemistry,"Product of ozonolysis of cyclohexene?",Tough,Adipaldehyde,Hexanal,Hexanol,Hexanoic acid,Adipaldehyde
+Chemistry,Chemical Reactions and Equations,"What is the product of the reaction between Na2CO3 and HCl?",Very Easy,NaCl + CO2 + H2O,Na2CO3 + HCl,Na + Cl2 + CO2,NaCl + CO2,NaCl + CO2 + H2O
+Chemistry,Chemical Reactions and Equations,"What is the balanced equation for the decomposition of potassium chlorate?",Easy,2KClO3 → 2KCl + 3O2,KClO3 → KCl + O2,KClO3 → KCl + 2O2,2KClO3 → KCl + O2,2KClO3 → 2KCl + 3O2
+Chemistry,Chemical Reactions and Equations,"What type of reaction is: Fe + CuSO4 → FeSO4 + Cu?",Moderate,Single displacement,Double displacement,Combination,Decomposition,Single displacement
+Chemistry,Chemical Reactions and Equations,"What is the product of the reaction between H2SO4 and NaOH?",Tricky,Na2SO4 + H2O,NaOH + H2SO4,Na2SO4,Na + SO2 + H2O,Na2SO4 + H2O
+Chemistry,Chemical Reactions and Equations,"What is the balanced equation for the reaction between H2 and O2?",Tough,2H2 + O2 → 2H2O,H2 + O2 → H2O,H2 + O2 → H2O2,2H2 + 2O2 → 2H2O,2H2 + O2 → 2H2O
+Chemistry,"Acids, Bases and Salts","What is the pH of a strong acid?",Very Easy,0,7,14,1,0
+Chemistry,"Acids, Bases and Salts","What is the pH of a solution with [OH-] = 10^-7 M?",Easy,7,1,14,0,7
+Chemistry,"Acids, Bases and Salts","What is the pH of a solution with [H+] = 10^-4 M?",Moderate,4,7,10,14,4
+Chemistry,"Acids, Bases and Salts","What is the pH of a 0.01 M H2SO4 solution?",Tricky,2,7,10,14,2
+Chemistry,"Acids, Bases and Salts","What is the pH of a 0.001 M NaOH solution?",Tough,11,7,2,14,11
+Chemistry,Metals and Non-metals,"Which of the following is a metal?",Very Easy,Copper,Iron,Sulfur,Aluminum,Copper
+Chemistry,Metals and Non-metals,"Which element is the best conductor of heat?",Easy,Silver,Copper,Iron,Gold,Silver
+Chemistry,Metals and Non-metals,"Which metal is used in making electric wires?",Moderate,Copper,Iron,Gold,Aluminum,Copper
+Chemistry,Metals and Non-metals,"Which element is most reactive?",Tricky,Potassium,Sodium,Calcium,Magnesium,Potassium
+Chemistry,Metals and Non-metals,"Which of these metals is used in making thermite?",Tough,Aluminum,Iron,Mercury,Copper,Aluminum
+Chemistry,Carbon and its Compounds,"What is the chemical formula of ethene?",Very Easy,C2H4,C2H6,C2H2,C2H8,C2H4
+Chemistry,Carbon and its Compounds,"What is the chemical formula of methane?",Easy,CH4,C2H6,C3H8,C4H10,CH4
+Chemistry,Carbon and its Compounds,"What is the functional group of aldehydes?",Moderate,-CHO,-OH,-COOH,-NH2,-CHO
+Chemistry,Carbon and its Compounds,"What is the IUPAC name of C2H5OH?",Tricky,Ethanol,Propane,Butanol,Methanol,Ethanol
+Chemistry,Carbon and its Compounds,"What is the structure of ethane?",Tough,C2H6,C2H4,C2H2,C2H8,C2H6
+Chemistry,Periodic Classification of Elements,"Which element has the atomic number 12?",Very Easy,Magnesium,Calcium,Carbon,Silicon,Magnesium
+Chemistry,Periodic Classification of Elements,"Which group does Calcium belong to?",Easy,Alkaline earth metals,Alkali metals,Halogens,Noble gases,Alkaline earth metals
+Chemistry,Periodic Classification of Elements,"Which period does Potassium belong to?",Moderate,4,3,5,6,4
+Chemistry,Periodic Classification of Elements,"Which element is a noble gas?",Tricky,Neon,Helium,Argon,Xenon,Neon
+Chemistry,Periodic Classification of Elements,"Which element is an alkali metal?",Tough,Lithium,Sodium,Potassium,Calcium,Lithium
+Chemistry,Organic Chemistry,"What is the molecular formula of ethane?",Very Easy,C2H6,C2H4,C2H2,C3H8,C2H6
+Chemistry,Organic Chemistry,"What is the functional group of alcohols?",Easy,-OH,-COOH,-CHO,-NH2,-OH
+Chemistry,Organic Chemistry,"What is the IUPAC name of CH3COOH?",Moderate,Ethanoic acid,Propanoic acid,Methanoic acid,Butanoic acid,Ethanoic acid
+Chemistry,Organic Chemistry,"What is hybridization in methane?",Tricky,sp³,sp²,sp,sp³d,sp³
+Chemistry,Organic Chemistry,"Predict the product of the reaction CH3Cl + NaOH → ?",Tough,CH3OH + NaCl,CH3CH2OH + NaCl,CH3COOH + NaCl,CH3Cl + NaOH,CH3OH + NaCl

@@ -191,3 +191,8 @@
     margin-bottom: 1rem;
   }
 }
+
+#performance-graph {
+  margin-top: 2rem;
+  width: 80vw;
+}
