@@ -4,7 +4,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--clr-accent-1);
   color: white;
   text-align: center;
 }
@@ -23,11 +22,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.result:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background-color: var(--clr-accent-1);
 }
 
 .content h1 {

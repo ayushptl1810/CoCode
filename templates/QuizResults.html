@@ -8,6 +8,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/quizresults.css') }}"
     />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/Logo.jpg') }}"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="navbar">
@@ -54,5 +59,37 @@
         <a href="{{ url_for('home') }}" class="btn-nav">Back to Home</a>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-content">
+          <h2>
+            Learn smarter with AI-driven insights, personalized topic
+            recommendations, and instant doubt resolution—perfect for exam prep
+            or expanding your knowledge.
+          </h2>
+        </div>
+        <div class="footer-list">
+          <h3>About</h3>
+          <ul role="list">
+            <li>News</li>
+            <li>Impact</li>
+            <li>Our team</li>
+            <li>Our finances</li>
+            <li>Careers</li>
+            <li>Internships</li>
+            <li>Cookie Preferences</li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <h3>Contact</h3>
+          <ul role="list">
+            <li>Help center</li>
+            <li>Support community</li>
+            <li>Share your story</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
